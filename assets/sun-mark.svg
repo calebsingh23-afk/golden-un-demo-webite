@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 80" role="img" aria-labelledby="title">
+<title id="title">Golden Sun rising sun mark</title>
+<g fill="none" stroke="#e9a914" stroke-width="4.5" stroke-linecap="round">
+<path d="M48 7v8M29 11l4 8M15 22l7 6M8 38l9 2M67 11l-4 8M81 22l-7 6M88 38l-9 2"/>
+</g>
+<path fill="#ffca38" d="M23 49a25 25 0 0 1 50 0Z"/>
+<path fill="#143867" d="M4 51c31 13 57-12 88 0C63 48 36 79 4 51Z"/>
+<path fill="#e9a914" d="M14 65c27 14 53-12 73-12-23 7-43 36-73 12Z"/>
+</svg>
