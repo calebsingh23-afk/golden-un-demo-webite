@@ -15,8 +15,8 @@ const links = [["index.html", "Home"], ["specials.html", "Specials"], ["departme
 const nav = page => links.map(([url, label]) => `<a href="${url}"${page === url ? ' aria-current="page"' : ''}>${label}</a>`).join("");
 const logo = `<img class="logo-full" src="assets/golden-sun.svg" width="232" height="53" alt="Golden Sun Supermarket"><span class="logo-mobile" aria-hidden="true"><img src="assets/sun-mark.svg" width="43" height="36" alt="">Golden Sun</span>`;
 const photo = (d, cls = "") => `<img class="${cls}" src="assets/${d.image}" width="512" height="511" loading="lazy" alt="${d.alt}">`;
-const empty = (className = "") => `<div class="offers ${className}" data-offers><div class="empty"><p>${noSpecials}</p><a class="text-link" href="tel:${firstPhone}">Call the store ${arrow}</a></div></div>`;
-const location = `<section class="visit-band" aria-labelledby="location-title"><div><h2 id="location-title">Find us in Tongaat</h2><address>${address}</address></div><div class="actions"><a class="button gold" href="${map}">${pin} Get directions</a><a class="button outline" href="tel:${firstPhone}">${phone} ${escape(store.phones[0])}</a><a class="text-link" href="visit.html">All contact details ${arrow}</a></div></section>`;
+const empty = (className = "") => `<div class="offers ${className}" data-offers><div class="empty"><p>${noSpecials}</p><a class="text-link" href="${firstPhone}">Call the store ${arrow}</a></div></div>`;
+const location = `<section class="visit-band" aria-labelledby="location-title"><div><h2 id="location-title">Find us in Tongaat</h2><address>${address}</address></div><div class="actions"><a class="button gold" href="${map}">${pin} Get directions</a><a class="button outline" href="${firstPhone}">${phone} ${escape(store.phones[0])}</a><a class="text-link" href="visit.html">All contact details ${arrow}</a></div></section>`;
 const pages = {
   "index.html": ["Golden Sun Supermarket | Tongaat", `
     <section class="hero" aria-labelledby="home-heading">
@@ -58,7 +58,7 @@ function layout(page, title, main) {
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="topbar"><div class="wrap top-inner"><span>${pin} Tongaat, KwaZulu-Natal</span><a href="tel:${firstPhone}">${phone} ${escape(store.phones[0])}</a></div></div>
+<div class="topbar"><div class="wrap top-inner"><span>${pin} Tongaat, KwaZulu-Natal</span><a href="${firstPhone}">${phone} ${escape(store.phones[0])}</a></div></div>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html" aria-label="Golden Sun Supermarket home">${logo}</a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu ${icon('<path d="M4 6h16M4 12h16M4 18h16"/>')}</button>
 <nav id="primary-nav" aria-label="Main navigation">${nav(page)}</nav><a class="header-directions text-link" href="${map}">${pin} Directions</a></div></header>
